@@ -19,8 +19,10 @@ A powerful RESTful web service to obtain movie information.
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+```
+### Main div block in script.js
 
-```css
+```js
 `
     <div class="info">
         <img src=${data.Poster} class="poster">
@@ -44,4 +46,7 @@ A powerful RESTful web service to obtain movie information.
     <p>${data.Plot}</p>
     <h3>Cast:</h3>
     <p>${data.Actors}</p>
-`;
+`
+;
+
+```
