@@ -1,0 +1,175 @@
+/* Linking google fonts: Kumbh sans */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans",sans-serif;
+}
+
+/* Adding root and custom variables */
+
+:root {
+    --white-color: white;
+    --black-color: #1c2833;
+    --primary-text: #91aec9;
+    --primary-color: #224362;
+}
+
+body{
+    color: black;
+    background: var(--black-color);
+    height: 100vh;
+}
+
+.container{
+    font-size: 0.9em;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 90vw;
+    max-width: 37.5em;
+    border-radius: 0.6em;
+    padding: 3em 1.8em;
+    box-shadow: 1.2em 2em 2em rgba(0, 0, 0, 0.2);
+}
+
+.search-container{
+    display: grid;
+    font-size: 0.9em;
+    gap: 1.2em;
+    grid-template-columns: 9fr 3fr;
+}
+
+.search-container input , .search-container button{
+    outline: none;
+    font-size: 0.9em;
+    border-radius: 0.3em;
+}
+
+.search-container input{
+    background: transparent;
+    color: #fff;
+    padding: 0.7em;
+    border: 1px solid var(--primary-text);
+}
+
+.search-container input:focus{
+    border: #fff;
+}
+
+.search-container button{
+    background-color: var(--primary-text);
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+#results{
+    color: #fff;
+}
+
+
+/* lets design movie card */
+
+.info{
+    display: grid;
+    grid-template-columns: 4fr 8fr ;
+    margin-top: 1.2em;
+    position: relative;
+}
+
+.poster{
+    width: 100%;
+}
+
+h2{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    margin: 0.6em 0 0.9em 0;
+}
+
+.rating img{
+    width: 1.2em;
+}
+
+.rating h4{
+    display: inline-block;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.details{
+    display: flex;
+    font-size: 1.1em;
+    gap: 1em ;
+    justify-content: center;
+    color: #a0a0a0;
+    margin: 0.6em 0;
+    font-weight: 600;
+}
+
+.genre{
+    display: flex;
+    justify-content: space-around;
+}
+
+.genre div{
+    border: 1px solid #a0a0a0;
+    font-size: 0.75em;
+    font-weight: 300;
+    padding: 0.4em 1.6em;
+    border-radius: 0.4em;
+    color: #fff;
+}
+
+h3{
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1.2em;
+}
+
+p{
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.8em;
+    text-align: justify;
+    color: #a0a0a0;
+}
+
+.msg{
+    color: #fff;
+    text-align: center;
+}
+
+/* Now adding resposiveness */
+
+@media screen and (max-width: 600px) {
+    .container{
+        font-size: 14px;
+    }
+
+    .poster{
+        margin: auto;
+        width: auto;
+        max-height: 10.8em;
+    }
+
+    .info{
+        grid-template-columns: 1fr;
+    }
+}
